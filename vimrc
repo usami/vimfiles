@@ -17,6 +17,7 @@ set smartcase " be case sensitive when search pattern contains a capital letter
 set incsearch " enable incremental search
 
 set whichwrap+=h,l,<,>,[,],b,s " allow the cursor move left/right over a line
+let mapleader = ','
 " "}}}
 
 " Formatting "{{{
@@ -42,6 +43,8 @@ set backspace+=start " allow backspacing over the start of insert
 syntax on  " enable syntax
 " colorscheme desert
 set number
+set showcmd   " show command in the last line
+set laststatus=2 " always show status line
 set showmatch " briefly jump to the matching one when a bracket is inserted
 set matchtime=2 " the time to show the match
 set ruler " show the line and column number of the cursor position
@@ -54,10 +57,11 @@ set foldlevel=100 " don't autofold
 
 
 " Key mappings "{{{
-noremap <C-j> 3j " fast move
-noremap <C-k> 3k
-noremap <C-h> 3h
-noremap <C-l> 3l
+noremap <C-j> <C-^>
+" noremap <C-j> 3j " fast move
+" noremap <C-k> 3k
+" noremap <C-h> 3h
+" noremap <C-l> 3l
 noremap # :call ToggleCommentSelection()<CR>
 " inoremap <C-b> <left> " emacs-like keybind
 " inoremap <C-f> <right> "
@@ -113,6 +117,13 @@ set background=dark
 let g:solarized_underline = 1
 colorscheme solarized
 " highlight Comment cterm=italic
+
+" Buffer
+Bundle 'buftabs'
+let buftabs_only_basename = 1
+let buftabs_in_statusline = 1
+Bundle 'bufexplorer'
+let bufExplorerDetailedHelp = 1 " always show help
 
 Bundle 'Align'
 
