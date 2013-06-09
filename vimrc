@@ -115,6 +115,8 @@ Bundle 'bufexplorer'
 let bufExplorerDetailedHelp = 1 " always show help
 
 Bundle 'Align'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
 " "}}}
