@@ -41,7 +41,6 @@ set backspace+=start " allow backspacing over the start of insert
 
 " Visual "{{{
 syntax on  " enable syntax
-" colorscheme desert
 set number
 set showcmd   " show command in the last line
 set laststatus=2 " always show status line
@@ -58,10 +57,6 @@ set foldlevel=100 " don't autofold
 
 " Key mappings "{{{
 noremap <C-j> <C-^>
-" noremap <C-j> 3j " fast move
-" noremap <C-k> 3k
-" noremap <C-h> 3h
-" noremap <C-l> 3l
 noremap # :call ToggleCommentSelection()<CR>
 " inoremap <C-b> <left> " emacs-like keybind
 " inoremap <C-f> <right> "
@@ -108,15 +103,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Color Scheme
-" Bundle 'thinca/vim-guicolorscheme'
 Bundle 'altercation/vim-colors-solarized'
-if !has('gui_running')
-  let g:solarized_termtrans=1 " compatibility for Terminal.app
-endif
 set background=dark
-let g:solarized_underline = 1
 colorscheme solarized
-" highlight Comment cterm=italic
 
 " Buffer
 Bundle 'buftabs'
