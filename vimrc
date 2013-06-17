@@ -106,6 +106,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
+highlight Comment cterm=italic
 
 " Buffer
 Bundle 'buftabs'
