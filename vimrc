@@ -65,11 +65,13 @@ let g:netrw_list_hide = '.git/' " ignore .git directories
 noremap <C-j> <C-^>
 noremap # :call ToggleCommentSelection()<CR>
 noremap <C-w>t :vertical resize 30<CR>
-" inoremap <C-b> <left> " emacs-like keybind
-" inoremap <C-f> <right> "
-" inoremap <C-a> <Home> "
-" inoremap <C-e> <End> "
-" inoremap <C-d> <Del> "
+
+" emacs-like keybinds
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Del>
 " "}}}
 
 " AutoCommands "{{{
