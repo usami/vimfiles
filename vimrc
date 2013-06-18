@@ -131,5 +131,15 @@ let g:neocomplcache_enable_at_startup = 1
 Bundle 'Markdown'
 Bundle 'suan/vim-instant-markdown'
 
+" Unite
+Bundle 'Shougo/unite.vim'
+Bundle 'h1mesuke/unite-outline'
+Bundle 'tsukkee/unite-help'
+Bundle 'Shougo/vimproc.vim'
+
+nnoremap <silent> ss :<C-u>Unite -buffer-name=files buffer file_rec file file_mru<CR>
+nnoremap <silent> sg :<C-u>Unite grep -no-quit<CR>
+nnoremap <silent> <C-h> :<C-u>Unite -start-insert help<CR>
+
 filetype plugin indent on
 " "}}}
