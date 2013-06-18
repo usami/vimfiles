@@ -53,12 +53,18 @@ set visualbell t_vb=  " no flush or beeping on error
 set foldenable " turn on folding
 set foldmethod=marker " fold on the marker
 set foldlevel=100 " don't autofold
+
+let g:netrw_liststyle = 3 " show netrw in tree view
+let g:netrw_altv = 1 " open files with 'v' to right space
+let g:netrw_alto = 1 " open files with 'o' to under space
+let g:netrw_list_hide = '.git/' " ignore .git directories
 " "}}}
 
 
 " Key mappings "{{{
 noremap <C-j> <C-^>
 noremap # :call ToggleCommentSelection()<CR>
+noremap <C-w>t :vertical resize 30<CR>
 " inoremap <C-b> <left> " emacs-like keybind
 " inoremap <C-f> <right> "
 " inoremap <C-a> <Home> "
