@@ -128,5 +128,8 @@ let g:indent_guides_guide_size = 1
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 
+Bundle 'Markdown'
+Bundle 'suan/vim-instant-markdown'
+
 filetype plugin indent on
 " "}}}
