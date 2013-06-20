@@ -42,7 +42,7 @@ set backspace+=start                 " allow backspacing over the start of inser
 
 " Visual "{{{
 syntax on                            " enable syntax
-set number
+set nonumber
 set showcmd                          " show command in the last line
 set laststatus=2                     " always show status line
 set showmatch                        " briefly jump to the matching one when a bracket is inserted
@@ -147,7 +147,8 @@ Bundle 'Shougo/vimproc.vim'
 
 nnoremap <silent> ss :<C-u>Unite -buffer-name=files buffer file_rec file file_mru<CR>
 nnoremap <silent> sg :<C-u>Unite grep -no-quit<CR>
-nnoremap <silent> <C-h> :<C-u>Unite -start-insert help<CR>
+nnoremap <silent> sh :<C-u>Unite -start-insert help<CR>
+nnoremap <silent> so :<C-u>Unite outline<CR>
 
 filetype plugin indent on
 " "}}}
