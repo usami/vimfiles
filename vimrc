@@ -63,7 +63,6 @@ let g:netrw_list_hide = '.git/'      " ignore .git directories
 
 " Key mappings "{{{
 noremap <C-j> <C-^>
-noremap # :call ToggleCommentSelection()<CR>
 noremap <C-w>t :vertical resize 30<CR>
 
 " emacs-like keybinds
@@ -80,31 +79,10 @@ augroup Autocmds
   au BufEnter * lcd %:p:h            " change current dir to the file dir
   au BufWritePre * :%s/\s\+$//e      " remove redundant spaces
   au BufWritePost vimrc :so %        " auto load vimrc when write it
-  au FileType vim let b:commentSymbol= "\" "
 augroup END
 " "}}}
 
 " Scripts and Bundles " {{{
-" Comment Toggle
-function! ToggleCommentSelection() range
-  if exists('b:commentSymbol')
-    let cs = b:commentSymbol
-  else
-let cs = "#"
-  endif
-  let cl = a:firstline
-  while (cl <= a:lastline)
-    let line = getline(cl)
-if strpart(line, match(line, "[^ \t]"), strlen(cs)) == cs
-execute "normal!^" . strlen(cs) . "x"
-    else
-execute "normal! I" . cs
-    endif
-    normal! j
-    let cl = cl + 1
-  endwhile
-endfunction
-
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -138,6 +116,10 @@ let g:neocomplcache_enable_at_startup = 1
 
 Bundle 'Markdown'
 Bundle 'suan/vim-instant-markdown'
+
+Bundle 'tomtom/tcomment_vim'
+nmap # gcc
+vmap # gc
 
 " Unite
 Bundle 'Shougo/unite.vim'
