@@ -77,10 +77,10 @@ inoremap <C-d> <Del>
 " AutoCommands "{{{
 augroup Autocmds
   au!
-au BufEnter * lcd %:p:h              " change current dir to the file dir
-au BufWritePre * :%s/\s\+$//e        " remove redundant spaces
-au BufWritePost vimrc :so %          " auto load vimrc when write it
-au FileType vim let b:commentSymbol= "\" "
+  au BufEnter * lcd %:p:h            " change current dir to the file dir
+  au BufWritePre * :%s/\s\+$//e      " remove redundant spaces
+  au BufWritePost vimrc :so %        " auto load vimrc when write it
+  au FileType vim let b:commentSymbol= "\" "
 augroup END
 " "}}}
 
