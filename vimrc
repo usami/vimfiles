@@ -95,13 +95,6 @@ set background=dark
 colorscheme solarized
 highlight Comment cterm=italic
 
-" Buffer
-Bundle 'buftabs'
-let buftabs_only_basename = 1
-let buftabs_in_statusline = 1
-Bundle 'bufexplorer'
-let bufExplorerDetailedHelp = 1      " always show help
-
 Bundle 'Align'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
