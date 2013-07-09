@@ -42,7 +42,7 @@ set backspace+=start                 " allow backspacing over the start of inser
 
 " Visual "{{{
 syntax on                            " enable syntax
-set nonumber
+set number
 set showcmd                          " show command in the last line
 set laststatus=2                     " always show status line
 set showmatch                        " briefly jump to the matching one when a bracket is inserted
@@ -99,10 +99,8 @@ Bundle 'Align'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
-Bundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
+Bundle 'Yggdroot/indentLine'
+let g:indentLine_char = '⋮'
 
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
