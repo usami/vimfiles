@@ -22,7 +22,6 @@ set shell=bash
 " "}}}
 
 " Formatting "{{{
-set formatoptions+=o                 " automatically insert the current comment leader after hitting 'o' or 'O' in Nomarl mode
 set formatoptions-=t                 " don't auto-wrap text using textwidth
 
 set nowrap
