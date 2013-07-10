@@ -22,8 +22,6 @@ set shell=bash
 " "}}}
 
 " Formatting "{{{
-set formatoptions-=t                 " don't auto-wrap text using textwidth
-
 set nowrap
 set encoding=utf-8                   " set encode to utf-8
 set textwidth=0                      " don't wrap lines by default
@@ -72,15 +70,6 @@ inoremap <C-e> <End>
 inoremap <C-d> <Del>
 " "}}}
 
-" AutoCommands "{{{
-augroup Autocmds
-  au!
-  au BufEnter * lcd %:p:h            " change current dir to the file dir
-  au BufWritePre * :%s/\s\+$//e      " remove redundant spaces
-  au BufWritePost vimrc :so %        " auto load vimrc when write it
-augroup END
-" "}}}
-
 " Scripts and Bundles " {{{
 filetype off
 set rtp+=~/.vim/bundle/vundle
@@ -123,4 +112,14 @@ nnoremap <silent> sh :<C-u>Unite -start-insert help<CR>
 nnoremap <silent> so :<C-u>Unite outline<CR>
 
 filetype plugin indent on
+" "}}}
+
+" AutoCommands "{{{
+augroup Autocmds
+  au!
+  au FileType * setlocal fo-=t fo-=o " don't auto-wrap and auto-insert comment leader
+  au BufEnter * lcd %:p:h            " change current dir to the file dir
+  au BufWritePre * :%s/\s\+$//e      " remove redundant spaces
+  au BufWritePost vimrc :so %        " auto load vimrc when write it
+augroup END
 " "}}}
