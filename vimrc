@@ -11,7 +11,7 @@ set autoread                         " automatically read changed file
 
 set hidden                           " buffer can be put background without writing
 
-set hlsearch                         " hilight search
+set hlsearch                         " highlight search
 set ignorecase                       " be case insensitive when searching
 set smartcase                        " be case sensitive when search pattern contains a capital letter
 set incsearch                        " enable incremental search
@@ -64,7 +64,7 @@ let g:netrw_list_hide = '.git/'      " ignore .git directories
 noremap <C-j> <C-^>
 noremap <C-w>t :vertical resize 30<CR>
 
-" emacs-like keybinds
+" emacs-like key-binds
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-a> <Home>
@@ -116,7 +116,7 @@ nnoremap <silent> so :<C-u>Unite outline<CR>
 filetype plugin indent on
 " "}}}
 
-" AutoCommands "{{{
+" Auto Commands "{{{
 augroup Autocmds
   au!
   au FileType * setlocal fo-=t fo-=o " don't auto-wrap and auto-insert comment leader
