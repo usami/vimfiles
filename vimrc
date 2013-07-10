@@ -19,6 +19,8 @@ set incsearch                        " enable incremental search
 set whichwrap+=h,l,<,>,[,],b,s       " allow the cursor move left/right over a line
 let mapleader = ','
 set shell=bash
+
+set spell                            " enable spell checking
 " "}}}
 
 " Formatting "{{{
