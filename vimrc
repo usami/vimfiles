@@ -21,6 +21,7 @@ let mapleader = ','
 set shell=bash
 
 set spell                            " enable spell checking
+let g:spellfile_URL = '~/.vim/bundle/spell/'
 " "}}}
 
 " Formatting "{{{
